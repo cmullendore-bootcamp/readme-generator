@@ -70,7 +70,7 @@ function writeToFile(fileName, answers, license) {
 ![${license.name}](https://img.shields.io/static/v1?label=license&message=${license.spdx_id}&color=blue)
 # ${answers.title}
 
-# Table of Contents
+## Table of Contents
 * [Project Description](#Description)
 * [Project Installation](#Installation)
 * [Project Usage](#Usage)
