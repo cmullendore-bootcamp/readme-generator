@@ -1,0 +1,35 @@
+[{
+    "type": "input",
+    "name": "title",
+    "message": "What is the name of your project?"
+}, {
+    "type": "input",
+    "name": "description",
+    "message": "Describe your project?"
+}, {
+    "type": "input",
+    "name": "installation",
+    "message": "How do you install your project?"
+}, {
+    "type": "input",
+    "name": "usage",
+    "message": "How do you use the project?"
+}, {
+    "type": "input",
+    "name": "contributing",
+    "message": "How can others contribute to the project?"
+}, {
+    "type": "input",
+    "name": "testing",
+    "message": "What are your testing procedures?"
+}, {
+    "type": "list",
+    "name": "license",
+    "message": "Which license does your project fall under?",
+    "choices": [
+        "Apache",
+        "GPL",
+        "MIT",
+        "CC"
+    ]
+}]
