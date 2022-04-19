@@ -30,19 +30,15 @@ function populateLicenses(questions) {
 function askQuestions(questions, licenses) {
     inquirer.prompt(questions)
         .then(answers => {
-
             licenses.forEach(lic => {
                 if (answers.license == lic.name) {
                     getLicenseDetail(answers, lic);
                 }
             });
-
-
         });
 }
 
 function getLicenseDetail(answers, license) {
-
     fetch(license.url)
         .then(response => {
             if (response.ok) {
@@ -51,14 +47,11 @@ function getLicenseDetail(answers, license) {
                         writeToFile("README.md", answers, license);
                     });
             }
-        })
-
-
+        });
 }
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, answers, license) {
-
 
     var content = `
 ![${license.name}](https://img.shields.io/static/v1?label=license&message=${license.spdx_id}&color=blue)
@@ -78,6 +71,12 @@ ${answers.contributing}
 
 ## Tests
 ${answers.testing}
+
+## Questions
+Feel free to contact me if you have questions about this project via email as below:
+* Owner: ${answers.fullname}
+* Email: ${answers.email}
+* GitHub Profile: https://github.com/${answers.github}
 
 ## License
 Licensed under the ${license.name} available at ${license.html_url}
