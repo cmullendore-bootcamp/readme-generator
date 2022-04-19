@@ -28,6 +28,7 @@ function populateLicenses(questions) {
 }
 
 function askQuestions(questions, licenses) {
+    console.log();
     inquirer.prompt(questions)
         .then(answers => {
             licenses.forEach(lic => {
@@ -56,6 +57,16 @@ function writeToFile(fileName, answers, license) {
     var content = `
 ![${license.name}](https://img.shields.io/static/v1?label=license&message=${license.spdx_id}&color=blue)
 # ${answers.title}
+
+# Table of Contents
+* [Project Description](#Description)
+* [Project Installation](#Installation)
+* [Project Usage](#Usage)
+* [Contributing to this Project](#Contributing)
+* [Project Tests](#Tests)
+* [Project Questions](#Questions)
+* [License](#License)
+
 
 ## Description
 ${answers.description}
