@@ -3,13 +3,15 @@
 # My Awesome Readme Generator
 
 ## Table of Contents
-* [Description](#Description)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Contributing](#Contributing)
-* [Tests](#Tests)
-* [Questions](#Questions)
-* [License](#License)
+- [My Awesome Readme Generator](#my-awesome-readme-generator)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  - [License](#license)
 
 
 ## Description
@@ -19,7 +21,7 @@ This generates a readme for your github repos.
 Download and extract the files or simply clone the github repo.
 
 ## Usage
-In a command prompt from the location of the files, simply run "node index" and the application should run.
+In a command prompt from the location of the files, simply run "node index" and the application should run. A video demonstration is [available here](https://1drv.ms/v/s!AvOM1kJNe-zxip9nS5jblNRXBAMENA?e=HGC0C5).
 
 ## Contributing
 At this point in time we are not accepting outside contributions, but watch this space for changes soon!
