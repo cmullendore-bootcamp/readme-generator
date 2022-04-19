@@ -33,37 +33,54 @@ function askQuestions(questions, licenses) {
 
             licenses.forEach(lic => {
                 if (answers.license == lic.name) {
-                    answers.license = lic;
+                    getLicenseDetail(answers, lic);
                 }
             });
 
-            writeToFile("README.md", answers);
+
         });
 }
 
+function getLicenseDetail(answers, license) {
+
+    fetch(license.url)
+        .then(response => {
+            if (response.ok) {
+                response.json()
+                    .then(license => {
+                        writeToFile("README.md", answers, license);
+                    });
+            }
+        })
+
+
+}
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, answers, license) {
 
 
-    var content = `# ${data.title}
+    var content = `
+![${license.name}](https://img.shields.io/static/v1?label=license&message=${license.spdx_id}&color=blue)
+# ${answers.title}
 
 ## Description
-${data.description}
+${answers.description}
 
 ## Installation
-${data.installation}
+${answers.installation}
 
 ## Usage
-${data.usage}
+${answers.usage}
 
 ## Contributing
-${data.contributing}
+${answers.contributing}
 
 ## Tests
-${data.testing}
+${answers.testing}
 
 ## License
-Licensed under the ${data.license.name} available at ${data.license.url}
+Licensed under the ${license.name} available at ${license.html_url}
     `;
 
     fs.writeFileSync(fileName, content);
