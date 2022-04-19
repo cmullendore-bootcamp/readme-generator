@@ -71,12 +71,12 @@ function writeToFile(fileName, answers, license) {
 # ${answers.title}
 
 ## Table of Contents
-* [Project Description](#Description)
-* [Project Installation](#Installation)
-* [Project Usage](#Usage)
-* [Contributing to this Project](#Contributing)
-* [Project Tests](#Tests)
-* [Project Questions](#Questions)
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
 * [License](#License)
 
 
