@@ -18,10 +18,12 @@
 This generates a readme for your github repos.
 
 ## Installation
+**This solution requires Node.js 17.5 or higher AND must be run with the '--experimental-fetch' flag.**
+
 Download and extract the files or simply clone the github repo.
 
 ## Usage
-In a command prompt from the location of the files, simply run "node index" and the application should run. A video demonstration is [available here](https://1drv.ms/v/s!AvOM1kJNe-zxip9nS5jblNRXBAMENA?e=HGC0C5).
+In a command prompt from the location of the files, simply run "node --experimental-fetch index" and the application should run. A video demonstration is [available here](https://1drv.ms/v/s!AvOM1kJNe-zxip9nS5jblNRXBAMENA?e=HGC0C5).
 
 ## Contributing
 At this point in time we are not accepting outside contributions, but watch this space for changes soon!
